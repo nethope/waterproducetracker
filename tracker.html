@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--
+  tracker.html
+
+  Joni Julian <joni@flyingpenguintech.org>
+
+  Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+  https://creativecommons.org/licenses/by-sa/4.0/
+-->
+
+<head>
+	<title>Water and Produce Tracker</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.27" />
+</head>
+
+<body>
+
+<script>
+var a=0;
+
+function increaseWater() {
+  a++;
+  document.getElementById('water_element').innerHTML= +a;
+}
+
+function decreaseWater() {
+  a--;
+  document.getElementById('water_element').innerHTML= +a;
+}
+
+var t=0;
+
+var r=0;
+
+function increaseRed() {
+  r++;
+  document.getElementById('red_element').innerHTML= +r;
+  t++;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+function decreaseRed() {
+  r--;
+  document.getElementById('red_element').innerHTML= +r;
+  t--;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+var y=0;
+
+function increaseYellowOrange() {
+  y++;
+  document.getElementById('yorange_element').innerHTML= +y;
+  t++;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+function decreaseYellowOrange() {
+  y--;
+  document.getElementById('yorange_element').innerHTML= +y;
+  t--;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+var g=0;
+
+function increaseGreen() {
+  g++;
+  document.getElementById('green_element').innerHTML= +g;
+  t++;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+function decreaseGreen() {
+  g--;
+  document.getElementById('green_element').innerHTML= +g;
+  t--;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+var b=0;
+
+function increaseBluePurple() {
+  b++;
+  document.getElementById('bluep_element').innerHTML= +b;
+  t++;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+function decreaseBluePurple() {
+  b--;
+  document.getElementById('bluep_element').innerHTML= +b;
+  t--;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+var w=0;
+
+function increaseWhite() {
+  w++;
+  document.getElementById('white_element').innerHTML= +w;
+  t++;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+function decreaseWhite() {
+  w--;
+  document.getElementById('white_element').innerHTML= +w;
+  t--;
+  document.getElementById('total_produce').innerHTML= +t;
+}
+
+</script>
+
+<h1>Water and Produce Tracker</h1>
+<h2>Test Area</h2>
+
+<h3>Water</h3>
+<div><table>
+  <tr>
+    <td width="96" height="128" style="background: url(water.png) no-repeat;" id="water_glass" valign="middle" align="center">
+      <span id="water_element">0</span>
+    </td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseWater();" value="+" /><br />
+      <input type="button" onclick="decreaseWater();" value="&ndash;" /></td>
+  </tr>
+</table></div>
+
+<p>Only the first produce section below will change values when you click +/&ndash;. In my testing, the rest will remain at zero.</p>
+
+<h3>Produce: Side-by-Side</h3>
+<div><table border="0">
+  <tr>
+    <td style="background: gray;"></td>
+    <td width="128" height="128" style="background: url(red.png) no-repeat;" id="red_produce" valign="middle" align="center">
+      <span id="red_element" style="color: white;">0</span>
+    </td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseRed();" value="+" /><br />
+      <input type="button" onclick="decreaseRed();" value="&ndash;" /></td>
+    <td style="background: gray;"></td>
+    <td width="128" height="128" style="background: url(yorange.png) no-repeat;" id="yelloworange_produce" valign="middle" align="center">
+      <span id="yorange_element">0</span>
+    </td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseYellowOrange();" value="+" /><br />
+      <input type="button" onclick="decreaseYellowOrange();" value="&ndash;" /></td>
+    <td style="background: gray;"></td>
+    <td width="128" height="128" style="background: url(green.png) no-repeat;" id="green_produce" valign="middle" align="center">
+      <span id="green_element" style="color: white;">0</span>
+    </td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseGreen();" value="+" /><br />
+      <input type="button" onclick="decreaseGreen();" value="&ndash;" /></td>
+    <td style="background: gray;"></td>
+    <td width="128" height="128" style="background: url(blue.png) no-repeat;" id="blue_produce" valign="middle" align="center">
+      <span id="bluep_element" style="color: white;">0</span>
+    </td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseBluePurple();" value="+" /><br />
+      <input type="button" onclick="decreaseBluePurple();" value="&ndash;" /></td>
+    <td style="background: gray;"></td>
+    <td width="128" height="128" style="background: url(white.png) no-repeat;" id="white_produce" valign="middle" align="center">
+      <span id="white_element">0</span>
+    </td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseWhite();" value="+" /><br />
+      <input type="button" onclick="decreaseWhite();" value="&ndash;" /></td>
+    <td style="background: gray;"></td>
+    <td valign="middle" align="center">Produce servings<br />today: <span id="total_produce">0</span></td>
+  </tr>
+</table></div>
+
+<h3>Produce: Together</h3>
+<div><table border="1">
+  <tr>
+    <td width="128" height="128" style="background: url(red.png) no-repeat;" id="red_produce" valign="middle" align="center">
+      <span id="red_element" style="color: white;">0</span><br />
+      <input type="button" onclick="increaseRed();" value="+" />/<input type="button" onclick="decreaseRed();" value="&ndash;" />
+    </td>
+    <td width="128" height="128" style="background: url(yorange.png) no-repeat;" id="yelloworange_produce" valign="middle" align="center">
+      <span id="yorange_element">0</span><br />
+      <input type="button" onclick="increaseYellowOrange();" value="+" />/<input type="button" onclick="decreaseYellowOrange();" value="&ndash;" /></td>
+    <td width="128" height="128" style="background: url(green.png) no-repeat;" id="green_produce" valign="middle" align="center">
+      <span id="green_element" style="color: white;">0</span><br />
+      <input type="button" onclick="increaseGreen();" value="+" />/<input type="button" onclick="decreaseGreen();" value="&ndash;" /></td>
+    <td width="128" height="128" style="background: url(blue.png) no-repeat;" id="blue_produce" valign="middle" align="center">
+      <span id="bluep_element" style="color: white;">0</span><br />
+      <input type="button" onclick="increaseBluePurple();" value="+" />/<input type="button" onclick="decreaseBluePurple();" value="&ndash;" /></td>
+    <td width="128" height="128" style="background: url(white.png) no-repeat;" id="white_produce" valign="middle" align="center">
+      <span id="white_element">0</span><br />
+      <input type="button" onclick="increaseWhite();" value="+" />/<input type="button" onclick="decreaseWhite();" value="&ndash;" /></td>
+    <td align="center">Produce servings<br />today: <span id="total_produce">0</span></td>
+  </tr>
+</table></div>
+
+<h3>Produce: Above-Below</h3>
+<div><table border="1">
+  <tr>
+    <td width="128" height="128" style="background: url(red.png) no-repeat;" id="red_produce" valign="middle" align="center">
+      <span id="red_element" style="color: white;">0</span>
+    </td>
+    <td width="128" height="128" style="background: url(yorange.png) no-repeat;" id="yelloworange_produce" valign="middle" align="center">
+      <span id="yorange_element">0</span>
+    </td>
+    <td width="128" height="128" style="background: url(green.png) no-repeat;" id="green_produce" valign="middle" align="center">
+      <span id="green_element" style="color: white;">0</span>
+    </td>
+    <td width="128" height="128" style="background: url(blue.png) no-repeat;" id="blue_produce" valign="middle" align="center">
+      <span id="bluep_element" style="color: white;">0</span>
+    </td>
+    <td width="128" height="128" style="background: url(white.png) no-repeat;" id="white_produce" valign="middle" align="center">
+      <span id="white_element">0</span>
+    </td>
+    <td valign="middle" align="center">Produce servings<br />today: <span id="total_produce">0</span></td>
+  </tr>
+  <tr>
+    <td valign="middle" align="center"><input type="button" onclick="increaseRed();" value="+" />/<input type="button" onclick="decreaseRed();" value="&ndash;" /></td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseYellowOrange();" value="+" />/<input type="button" onclick="decreaseYellowOrange();" value="&ndash;" /></td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseGreen();" value="+" />/<input type="button" onclick="decreaseGreen();" value="&ndash;" /></td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseBluePurple();" value="+" />/<input type="button" onclick="decreaseBluePurple();" value="&ndash;" /></td>
+    <td valign="middle" align="center"><input type="button" onclick="increaseWhite();" value="+" />/<input type="button" onclick="decreaseWhite();" value="&ndash;" /></td>
+    <td></td>
+  </tr>
+</table></div>
+
+<!--
+  DRY test failed:
+  I can't pass the element name to the increase/decrease functions.
+  At least not with my ECMAScript skills.
+-->
+
+<h3>Sources</h3>
+<ul>
+  <li>inspired by the water tracker on <a href="https://www.sparkpeople.com/">SparkPeople</a></li>
+  <li><a href="https://openclipart.org/detail/25330/glass">image: water</a></li>
+  <li><a href="https://openclipart.org/detail/209694/food-tomato">image: red tomato</a></li>
+  <li><a href="https://openclipart.org/detail/169008/orange-pepper">image: yellow-orange bell pepper</a></li>
+  <li><a href="https://openclipart.org/detail/209529/food-broccoli">image: green broccoli</a></li>
+  <li><a href="https://openclipart.org/detail/209704/food-whortleberry">image: blue-purple berry</a></li>
+  <li><a href="https://openclipart.org/detail/8105/mushrooms">image: white mushrooms</a></li>
+  <li><a href="https://stackoverflow.com/a/6074461/6213339">simple increment</a></li>
+</ul>
+</body>
+
+</html>
