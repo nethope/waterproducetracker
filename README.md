@@ -1,6 +1,6 @@
 # Water and Produce Tracker
 
-I was inspired by the water tracker on [SparkPeople](https://www.sparkpeople.com/), and I wanted something simmilar to track both the number of servings of produce per day as well as the color (the more variety, the better). The recommendation is a minimum of 3 to 5 servings per day of produce; the typical serving size is 1/2 cup (raw or cooked), with the notable exception of 2 cups per serving for raw, leafy greens (think salad). The more varied the produce eaten, the healthier. Since the different color families have different phytochemicals, the recommendation is to: Eat the Rainbow!
+I was inspired by the water tracker on [SparkPeople](https://www.sparkpeople.com/), and I wanted something similar to track both the number of servings of fruits and vegetables per day as well as the color. The recommendation is a minimum of 3 to 5 servings per day of produce; the typical serving size is 1/2 cup (raw or cooked), with the notable exception of 2 cups per serving for raw, leafy greens (think salad). The more varied the produce eaten, the healthier. Since the different color families have different phytochemicals, the recommendation is to [Eat the Rainbow](https://lifehacker.com/what-it-means-to-eat-the-rainbow-1594799068)!
 
 ## Resources
 
