@@ -21,15 +21,20 @@
 
 <script>
 var a=0;
+var o=0;
 
 function increaseWater() {
   a++;
   document.getElementById('water_element').innerHTML= +a;
+  o++;
+  document.getElementById('total_water').innerHTML= +o;
 }
 
 function decreaseWater() {
   a--;
   document.getElementById('water_element').innerHTML= +a;
+  o--;
+  document.getElementById('total_water').innerHTML= +o;
 }
 
 var t=0;
@@ -117,109 +122,32 @@ function decreaseWhite() {
 </script>
 
 <h1>Water and Produce Tracker</h1>
-<h2>Test Area</h2>
 
-<h3>Water</h3>
-<div><table>
-  <tr>
-    <td width="96" height="128" style="background: url(water.png) no-repeat;" id="water_glass" valign="middle" align="center">
-      <span id="water_element">0</span>
-    </td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseWater();" value="+" /><br />
-      <input type="button" onclick="decreaseWater();" value="&ndash;" /></td>
-  </tr>
-</table></div>
-
-<p>Only the first produce section below will change values when you click +/&ndash;. In my testing, the rest will remain at zero.</p>
-
-<h3>Produce: Side-by-Side</h3>
 <div><table border="0">
   <tr>
-    <td style="background: gray;"></td>
-    <td width="128" height="128" style="background: url(red.png) no-repeat;" id="red_produce" valign="middle" align="center">
-      <span id="red_element" style="color: white;">0</span>
-    </td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseRed();" value="+" /><br />
-      <input type="button" onclick="decreaseRed();" value="&ndash;" /></td>
-    <td style="background: gray;"></td>
-    <td width="128" height="128" style="background: url(yorange.png) no-repeat;" id="yelloworange_produce" valign="middle" align="center">
-      <span id="yorange_element">0</span>
-    </td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseYellowOrange();" value="+" /><br />
-      <input type="button" onclick="decreaseYellowOrange();" value="&ndash;" /></td>
-    <td style="background: gray;"></td>
-    <td width="128" height="128" style="background: url(green.png) no-repeat;" id="green_produce" valign="middle" align="center">
-      <span id="green_element" style="color: white;">0</span>
-    </td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseGreen();" value="+" /><br />
-      <input type="button" onclick="decreaseGreen();" value="&ndash;" /></td>
-    <td style="background: gray;"></td>
-    <td width="128" height="128" style="background: url(blue.png) no-repeat;" id="blue_produce" valign="middle" align="center">
-      <span id="bluep_element" style="color: white;">0</span>
-    </td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseBluePurple();" value="+" /><br />
-      <input type="button" onclick="decreaseBluePurple();" value="&ndash;" /></td>
-    <td style="background: gray;"></td>
-    <td width="128" height="128" style="background: url(white.png) no-repeat;" id="white_produce" valign="middle" align="center">
-      <span id="white_element">0</span>
-    </td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseWhite();" value="+" /><br />
-      <input type="button" onclick="decreaseWhite();" value="&ndash;" /></td>
-    <td style="background: gray;"></td>
-    <td valign="middle" align="center">Produce servings<br />today: <span id="total_produce">0</span></td>
+    <td align="center">Water glasses<br />today: <span id="total_water">0</span></td>
+    <td colspan="5" height="128" style="background: url(water.png) center no-repeat;" id="water_glass" valign="middle" align="center">
+      <span id="water_element">0</span><br />
+      <input type="button" onclick="increaseWater();" value="+" />/<input type="button" onclick="decreaseWater();" value="&ndash;" /></td>
   </tr>
-</table></div>
-
-<h3>Produce: Together</h3>
-<div><table border="1">
   <tr>
-    <td width="128" height="128" style="background: url(red.png) no-repeat;" id="red_produce" valign="middle" align="center">
+    <td align="center">Produce servings<br />today: <span id="total_produce">0</span></td>
+    <td width="128" height="128" style="background: url(red.png) center no-repeat;" id="red_produce" valign="middle" align="center">
       <span id="red_element" style="color: white;">0</span><br />
       <input type="button" onclick="increaseRed();" value="+" />/<input type="button" onclick="decreaseRed();" value="&ndash;" />
     </td>
-    <td width="128" height="128" style="background: url(yorange.png) no-repeat;" id="yelloworange_produce" valign="middle" align="center">
+    <td width="128" height="128" style="background: url(yorange.png) center no-repeat;" id="yelloworange_produce" valign="middle" align="center">
       <span id="yorange_element">0</span><br />
       <input type="button" onclick="increaseYellowOrange();" value="+" />/<input type="button" onclick="decreaseYellowOrange();" value="&ndash;" /></td>
-    <td width="128" height="128" style="background: url(green.png) no-repeat;" id="green_produce" valign="middle" align="center">
+    <td width="128" height="128" style="background: url(green.png) center no-repeat;" id="green_produce" valign="middle" align="center">
       <span id="green_element" style="color: white;">0</span><br />
       <input type="button" onclick="increaseGreen();" value="+" />/<input type="button" onclick="decreaseGreen();" value="&ndash;" /></td>
-    <td width="128" height="128" style="background: url(blue.png) no-repeat;" id="blue_produce" valign="middle" align="center">
+    <td width="128" height="128" style="background: url(blue.png) center no-repeat;" id="blue_produce" valign="middle" align="center">
       <span id="bluep_element" style="color: white;">0</span><br />
       <input type="button" onclick="increaseBluePurple();" value="+" />/<input type="button" onclick="decreaseBluePurple();" value="&ndash;" /></td>
-    <td width="128" height="128" style="background: url(white.png) no-repeat;" id="white_produce" valign="middle" align="center">
+    <td width="128" height="128" style="background: url(white.png) center no-repeat;" id="white_produce" valign="middle" align="center">
       <span id="white_element">0</span><br />
       <input type="button" onclick="increaseWhite();" value="+" />/<input type="button" onclick="decreaseWhite();" value="&ndash;" /></td>
-    <td align="center">Produce servings<br />today: <span id="total_produce">0</span></td>
-  </tr>
-</table></div>
-
-<h3>Produce: Above-Below</h3>
-<div><table border="1">
-  <tr>
-    <td width="128" height="128" style="background: url(red.png) no-repeat;" id="red_produce" valign="middle" align="center">
-      <span id="red_element" style="color: white;">0</span>
-    </td>
-    <td width="128" height="128" style="background: url(yorange.png) no-repeat;" id="yelloworange_produce" valign="middle" align="center">
-      <span id="yorange_element">0</span>
-    </td>
-    <td width="128" height="128" style="background: url(green.png) no-repeat;" id="green_produce" valign="middle" align="center">
-      <span id="green_element" style="color: white;">0</span>
-    </td>
-    <td width="128" height="128" style="background: url(blue.png) no-repeat;" id="blue_produce" valign="middle" align="center">
-      <span id="bluep_element" style="color: white;">0</span>
-    </td>
-    <td width="128" height="128" style="background: url(white.png) no-repeat;" id="white_produce" valign="middle" align="center">
-      <span id="white_element">0</span>
-    </td>
-    <td valign="middle" align="center">Produce servings<br />today: <span id="total_produce">0</span></td>
-  </tr>
-  <tr>
-    <td valign="middle" align="center"><input type="button" onclick="increaseRed();" value="+" />/<input type="button" onclick="decreaseRed();" value="&ndash;" /></td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseYellowOrange();" value="+" />/<input type="button" onclick="decreaseYellowOrange();" value="&ndash;" /></td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseGreen();" value="+" />/<input type="button" onclick="decreaseGreen();" value="&ndash;" /></td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseBluePurple();" value="+" />/<input type="button" onclick="decreaseBluePurple();" value="&ndash;" /></td>
-    <td valign="middle" align="center"><input type="button" onclick="increaseWhite();" value="+" />/<input type="button" onclick="decreaseWhite();" value="&ndash;" /></td>
-    <td></td>
   </tr>
 </table></div>
 
